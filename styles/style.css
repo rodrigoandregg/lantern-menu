@@ -1,0 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.nav {
+	background-color: #333;
+	width: 30em;
+	height: 8em;
+	border-radius: 2em;
+	padding: 0 2em;
+	box-shadow: 0 1em 1em rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.nav ul {
+	list-style: none;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav ul li a {
+	font-size: 2.5em;
+	color: #fff;
+	opacity: 0.5;
+}
+
+.nav-light {
+	position: absolute;
+	top: 0;
+	left: 1.3em;
+	background-color: #eee;
+	width: 4em;
+	height: 0.4em;
+	border-radius: 2px;
+	display: flex;
+	justify-content: center;
+	transition: 0.3s ease;
+}
+
+.nav-light::before {
+	content: "";
+	width: 5em;
+	height: 7em;
+	position: absolute;
+	top: 0.4em;
+	background: linear-gradient(
+		to bottom,
+		rgba(255, 255, 255, 0.3) -50%,
+		rgba(255, 255, 255, 0) 90%
+	);
+	clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+ul li.active a {
+	opacity: 1;
+}
+
+/* home */
+
+li.active .bx-home-alt-2 {
+	color: #ff00aa;
+	text-shadow: 0 0 15px #ff00aa, 0 0 30px #ff00aa, 0 0 45px #ff00aa,
+		0 0 60px #ff00aa;
+}
+
+li:nth-child(1).active ~ .nav-light {
+	background-color: #ff00aa;
+}
+
+/* hourglass */
+
+li.active .bx-hourglass {
+	color: #ff8800;
+	text-shadow: 0 0 15px #ff8800, 0 0 30px #ff8800, 0 0 45px #ff8800,
+		0 0 60px #ff8800;
+}
+
+li:nth-child(2).active ~ .nav-light {
+	background-color: #ff8800;
+}
+
+/* heart */
+
+li.active .bx-heart {
+	color: #ff0000;
+	text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000, 0 0 45px #ff0000,
+		0 0 60px #ff0000;
+}
+
+li:nth-child(3).active ~ .nav-light {
+	background-color: #ff0000;
+}
+
+/* user */
+
+li.active .bx-user {
+	color: #00f7ff;
+	text-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff, 0 0 45px #00f7ff,
+		0 0 60px #00f7ff;
+}
+
+li:nth-child(4).active ~ .nav-light {
+	background-color: #00f7ff;
+}
+
+/* happy */
+
+li.active .bx-happy {
+	color: #e5ff00;
+	text-shadow: 0 0 15px #e5ff00, 0 0 30px #e5ff00, 0 0 45px #e5ff00,
+		0 0 60px #e5ff00;
+}
+
+li:nth-child(5).active ~ .nav-light {
+	background-color: #e5ff00;
+}
